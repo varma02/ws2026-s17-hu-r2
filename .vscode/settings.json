@@ -1,0 +1,32 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "dusza",
+      "database": "duszadb",
+      "username": "dusza",
+      "password": "fCJNZhe$527P@FcV"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "db",
+      "port": 3306,
+      "driver": "MariaDB",
+      "name": "ws2026-r2",
+      "database": "mariadb",
+      "username": "mariadb",
+      "password": "mariadb"
+    }
+  ]
+}

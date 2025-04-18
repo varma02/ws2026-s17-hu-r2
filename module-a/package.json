@@ -1,0 +1,22 @@
+{
+  "name": "module-a",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/bun": "latest",
+    "@types/express": "^5.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0"
+  }
+}

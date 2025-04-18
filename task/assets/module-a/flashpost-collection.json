@@ -1,0 +1,743 @@
+{
+  "app": "Flashpost",
+  "id": "c1b8f2a9-0d3e-4a1b-8c7d-9f3e2a0b1d4e",
+  "name": "ws2026-s17-hu-r2",
+  "version": "1.0",
+  "type": "collections",
+  "createdTime": "18-Apr-2025 10:45:00",
+  "exportedDate": "18-Apr-2025 10:45:00",
+  "collections": [
+    {
+      "id": "c1b8f2a9-0d3e-4a1b-8c7d-9f3e2a0b1d4e",
+      "parent": "0",
+      "text": "ws2026-s17-hu-r2",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "treeNodeType": "collection",
+        "variableId": ""
+      },
+      "relativeIndex": 0
+    },
+    {
+      "id": "ab730472-d484-4c73-9c0d-978fdb15faa9",
+      "parent": "c1b8f2a9-0d3e-4a1b-8c7d-9f3e2a0b1d4e",
+      "text": "Admin",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "ab730472-d484-4c73-9c0d-978fdb15faa9",
+        "name": "Admin",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 0
+    },
+    {
+      "id": "1a27a3e0-6909-468b-8d18-bb96445c4ccf",
+      "parent": "ab730472-d484-4c73-9c0d-978fdb15faa9",
+      "text": "Auth",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "1a27a3e0-6909-468b-8d18-bb96445c4ccf",
+        "name": "Auth",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 0
+    },
+    {
+      "id": "req_admins_list",
+      "parent": "1a27a3e0-6909-468b-8d18-bb96445c4ccf",
+      "text": "Admins",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_admins_list",
+        "method": "get",
+        "name": "Admins",
+        "url": "localhost/api/v1/admin/list",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_admin_create",
+      "parent": "1a27a3e0-6909-468b-8d18-bb96445c4ccf",
+      "text": "Admin Create",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_admin_create",
+        "method": "post",
+        "name": "Admin Create",
+        "url": "localhost/api/v1/admin/register",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_admin_login",
+      "parent": "1a27a3e0-6909-468b-8d18-bb96445c4ccf",
+      "text": "Admin Login",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_admin_login",
+        "method": "post",
+        "name": "Admin Login",
+        "url": "localhost/api/v1/admin/login",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_admin_logout",
+      "parent": "1a27a3e0-6909-468b-8d18-bb96445c4ccf",
+      "text": "Admin Logout",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_admin_logout",
+        "method": "post",
+        "name": "Admin Logout",
+        "url": "localhost/api/v1/admin/logout",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "9b06b54b-e59a-452b-a44d-f9cc2bd24782",
+      "parent": "ab730472-d484-4c73-9c0d-978fdb15faa9",
+      "text": "Locations",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "9b06b54b-e59a-452b-a44d-f9cc2bd24782",
+        "name": "Locations",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 1
+    },
+    {
+      "id": "req_locations_list",
+      "parent": "9b06b54b-e59a-452b-a44d-f9cc2bd24782",
+      "text": "List Locations Brief",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_locations_list",
+        "method": "get",
+        "name": "List Locations Brief",
+        "url": "localhost/api/v1/admin/locations",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_locations_create",
+      "parent": "9b06b54b-e59a-452b-a44d-f9cc2bd24782",
+      "text": "Create Location",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_locations_create",
+        "method": "post",
+        "name": "Create Location",
+        "url": "localhost/api/v1/admin/locations",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_locations_delete",
+      "parent": "9b06b54b-e59a-452b-a44d-f9cc2bd24782",
+      "text": "Delete Location",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_locations_delete",
+        "method": "delete",
+        "name": "Delete Location",
+        "url": "localhost/api/v1/admin/locations/buda-hills-sudsy",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_locations_update",
+      "parent": "9b06b54b-e59a-452b-a44d-f9cc2bd24782",
+      "text": "Update Location",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_locations_update",
+        "method": "put",
+        "name": "Update Location",
+        "url": "localhost/api/v1/admin/locations/downtown-sudsy",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "35444b62-e0eb-4edf-8b7a-baa9e7ad8525",
+      "parent": "ab730472-d484-4c73-9c0d-978fdb15faa9",
+      "text": "Machines",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "35444b62-e0eb-4edf-8b7a-baa9e7ad8525",
+        "name": "Machines",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 2
+    },
+    {
+      "id": "req_machines_list",
+      "parent": "35444b62-e0eb-4edf-8b7a-baa9e7ad8525",
+      "text": "List Machines",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_machines_list",
+        "method": "get",
+        "name": "List Machines",
+        "url": "localhost/api/v1/admin/machines",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "7ee70b08-7487-4fa0-b843-f8e703f120e6",
+      "parent": "ab730472-d484-4c73-9c0d-978fdb15faa9",
+      "text": "Subscriptions",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "7ee70b08-7487-4fa0-b843-f8e703f120e6",
+        "name": "Subscriptions",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 3
+    },
+    {
+      "id": "req_subs_list",
+      "parent": "7ee70b08-7487-4fa0-b843-f8e703f120e6",
+      "text": "List Subscriptions",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_subs_list",
+        "method": "get",
+        "name": "List Subscriptions",
+        "url": "localhost/api/v1/admin/subscriptions",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_subs_delete",
+      "parent": "7ee70b08-7487-4fa0-b843-f8e703f120e6",
+      "text": "Delete Subscription",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_subs_delete",
+        "method": "delete",
+        "name": "Delete Subscription",
+        "url": "localhost/api/v1/admin/subscriptions/3",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "0784aa68-9b53-4d09-a267-b8266886baf1",
+      "parent": "c1b8f2a9-0d3e-4a1b-8c7d-9f3e2a0b1d4e",
+      "text": "Locations",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "0784aa68-9b53-4d09-a267-b8266886baf1",
+        "name": "Locations",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 1
+    },
+    {
+      "id": "req_locations_paginated",
+      "parent": "0784aa68-9b53-4d09-a267-b8266886baf1",
+      "text": "Paginated Locations",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_locations_paginated",
+        "method": "get",
+        "name": "Paginated Locations",
+        "url": "localhost/api/v1/locations",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_locations_details",
+      "parent": "0784aa68-9b53-4d09-a267-b8266886baf1",
+      "text": "Location Details",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_locations_details",
+        "method": "get",
+        "name": "Location Details",
+        "url": "localhost/api/v1/locations/downtown-sudsy",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "ef5d61ee-248e-43c8-81ae-4a20f5bdb73c",
+      "parent": "c1b8f2a9-0d3e-4a1b-8c7d-9f3e2a0b1d4e",
+      "text": "Subscribe",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "ef5d61ee-248e-43c8-81ae-4a20f5bdb73c",
+        "name": "Subscribe",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 2
+    },
+    {
+      "id": "req_subscribe_create",
+      "parent": "ef5d61ee-248e-43c8-81ae-4a20f5bdb73c",
+      "text": "Create Subscription",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_subscribe_create",
+        "method": "post",
+        "name": "Create Subscription",
+        "url": "localhost/api/v1/subscribe",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "req_subscribe_fail",
+      "parent": "ef5d61ee-248e-43c8-81ae-4a20f5bdb73c",
+      "text": "Subscription Fail",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_subscribe_fail",
+        "method": "post",
+        "name": "Subscription Fail",
+        "url": "localhost/api/v1/subscribe",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    },
+    {
+      "id": "1b11c4af-9e50-4e59-8faf-bf98bb2c3e56",
+      "parent": "c1b8f2a9-0d3e-4a1b-8c7d-9f3e2a0b1d4e",
+      "text": "Utils",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": true,
+      "data": {
+        "id": "1b11c4af-9e50-4e59-8faf-bf98bb2c3e56",
+        "name": "Utils",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "folder"
+      },
+      "relativeIndex": 3
+    },
+    {
+      "id": "req_utils_reset",
+      "parent": "1b11c4af-9e50-4e59-8faf-bf98bb2c3e56",
+      "text": "Reset DB",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "droppable": false,
+      "data": {
+        "id": "req_utils_reset",
+        "method": "delete",
+        "name": "Reset DB",
+        "url": "localhost/api/v1/utils/db/reset",
+        "createdTime": "18-Apr-2025 10:45:00",
+        "treeNodeType": "request"
+      }
+    }
+  ],
+  "requests": [
+    {
+      "id": "req_admins_list",
+      "url": "localhost/api/v1/admin/list",
+      "name": "Admins",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "get",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_admin_create",
+      "url": "localhost/api/v1/admin/register",
+      "name": "Admin Create",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "post",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true },
+        { "key": "Content-Type", "value": "application/json", "isChecked": true }
+      ],
+      "body": {
+        "bodyType": "raw",
+        "raw": {
+          "data": "{\n  \"name\": \"Admin Cranjis\",\n  \"username\": \"cranjis\",\n  \"password\": \"password\"\n}",
+          "lang": "json"
+        }
+      },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_admin_login",
+      "url": "localhost/api/v1/admin/login",
+      "name": "Admin Login",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "post",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true },
+        { "key": "Content-Type", "value": "application/json", "isChecked": true }
+      ],
+      "body": {
+        "bodyType": "raw",
+        "raw": {
+          "data": "{\n  \"username\": \"admin\",\n  \"password\": \"admin\"\n}\n",
+          "lang": "json"
+        }
+      },
+      "tests": [],
+      "setvar": [],
+      "notes": "Hopscotch test script to set token ignored:\nif(pw.response.status === 200) {\n\tconst jsonData = pw.response.body;\n\tpw.env.set(\"token\", jsonData.token);\n}",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_admin_logout",
+      "url": "localhost/api/v1/admin/logout",
+      "name": "Admin Logout",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "post",
+      "params": [],
+      "pathParams": [],
+       "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_locations_list",
+      "url": "localhost/api/v1/admin/locations",
+      "name": "List Locations Brief",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "get",
+      "params": [],
+      "pathParams": [],
+       "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_locations_create",
+      "url": "localhost/api/v1/admin/locations",
+      "name": "Create Location",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "post",
+      "params": [],
+      "pathParams": [],
+      "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+         { "key": "Accept", "value": "application/json", "isChecked": true },
+         { "key": "Content-Type", "value": "application/json", "isChecked": true }
+      ],
+      "body": {
+        "bodyType": "raw",
+        "raw": {
+          "data": "{\n  \"name\": \"Created Location\",\n  \"description\": \"<p>This is the description of my new location</p>\",\n  \"opens_at\": \"07:30\",\n  \"closes_at\": \"19:00\",\n  \"postal_code\": 1200,\n  \"city\": \"Budapest\",\n  \"address\": \"Test tér. 2\",\n  \"amenities\": {\n    \"accessible\": true,\n    \"easy_parking\": false,\n    \"lounge_area\": true,\n    \"music\": true,\n    \"wifi\": false\n  },\n  \"machine_ids\": [\n    1,\n    3,\n    3,\n    4\n  ]\n}\n",
+          "lang": "json"
+        }
+      },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_locations_delete",
+      "url": "localhost/api/v1/admin/locations/buda-hills-sudsy",
+      "name": "Delete Location",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "delete",
+      "params": [],
+      "pathParams": [],
+       "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_locations_update",
+      "url": "localhost/api/v1/admin/locations/downtown-sudsy",
+      "name": "Update Location",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "put",
+      "params": [],
+      "pathParams": [],
+      "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true },
+        { "key": "Content-Type", "value": "application/json", "isChecked": true }
+      ],
+      "body": {
+        "bodyType": "raw",
+        "raw": {
+          "data": "{\n  \"description\": \"<p>Perfect for city dwellers, this laundromat is in the <strong>heart of downtown</strong>.</p>\",\n  \"opens_at\": \"06:00\",\n  \"closes_at\": \"23:00\",\n  \"amenities\": {\n    \"easy_parking\": true\n  },\n  \"machine_ids\": [1, 3]\n}\n",
+          "lang": "json"
+        }
+      },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_machines_list",
+      "url": "localhost/api/v1/admin/machines",
+      "name": "List Machines",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "get",
+      "params": [],
+      "pathParams": [],
+      "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_subs_list",
+      "url": "localhost/api/v1/admin/subscriptions",
+      "name": "List Subscriptions",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "get",
+      "params": [],
+      "pathParams": [],
+      "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_subs_delete",
+      "url": "localhost/api/v1/admin/subscriptions/3",
+      "name": "Delete Subscription",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "delete",
+      "params": [],
+      "pathParams": [],
+      "auth": {
+        "authType": "bearertoken",
+        "password": "<<token>>",
+        "tokenPrefix": "Bearer"
+      },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_locations_paginated",
+      "url": "localhost/api/v1/locations",
+      "name": "Paginated Locations",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "get",
+      "params": [
+        { "key": "page", "value": "1", "isChecked": true },
+        { "key": "pageSize", "value": "6", "isChecked": true },
+        { "key": "search", "value": "Sudsy", "isChecked": true }
+      ],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_locations_details",
+      "url": "localhost/api/v1/locations/downtown-sudsy",
+      "name": "Location Details",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "get",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_subscribe_create",
+      "url": "localhost/api/v1/subscribe",
+      "name": "Create Subscription",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "post",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true },
+        { "key": "Content-Type", "value": "application/json", "isChecked": true }
+      ],
+      "body": {
+        "bodyType": "raw",
+        "raw": {
+          "data": "{\n  \"nickname\": \"Testy\",\n  \"display_email\": \"test+letters@gmail.com\"\n}\n",
+          "lang": "json"
+        }
+      },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_subscribe_fail",
+      "url": "localhost/api/v1/subscribe",
+      "name": "Subscription Fail",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "post",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true },
+        { "key": "Content-Type", "value": "application/json", "isChecked": true }
+      ],
+      "body": {
+        "bodyType": "raw",
+        "raw": {
+          "data": "{\n  \"nickname\": \"Joshua\",\n  \"display_email\": \"josh+sudsy-fail-test@gmail.com\"\n}\n",
+          "lang": "json"
+        }
+      },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    },
+    {
+      "id": "req_utils_reset",
+      "url": "localhost/api/v1/utils/db/reset",
+      "name": "Reset DB",
+      "createdTime": "18-Apr-2025 10:45:00",
+      "method": "delete",
+      "params": [],
+      "pathParams": [],
+      "auth": { "authType": "noauth" },
+      "headers": [
+        { "key": "Accept", "value": "application/json", "isChecked": true }
+      ],
+      "body": { "bodyType": "none" },
+      "tests": [],
+      "setvar": [],
+      "notes": "",
+      "selectedEnvironmentId": ""
+    }
+  ]
+}
