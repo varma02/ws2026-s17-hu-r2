@@ -17,7 +17,7 @@ export class Validator {
   }
   
   len(min?: number, max?: number) {
-    if (!this.error)
+    if (!this.error && this.data !== undefined)
     if (min && this.data.length < min)
       this.error = `field minimum length is ${min}`;
     else if (max && this.data.length > max)
@@ -26,7 +26,7 @@ export class Validator {
   }
   
   kebab() {
-    if (!this.error) {
+    if (!this.error && this.data !== undefined) {
       this.string(/^[a-zA-Z0-9\-]+$/);
       if (this.error?.includes("match"))
         this.error = "field can only contain lowercase letters, numbers and dashes";
@@ -35,7 +35,7 @@ export class Validator {
   }
 
   string(pattern?: RegExp) {
-    if (!this.error)
+    if (!this.error && this.data !== undefined)
     if (typeof this.data != "string")
       this.error = "field must be type string";
     else if (pattern && !this.data.match(pattern))
@@ -44,27 +44,34 @@ export class Validator {
   }
 
   boolean() {
-    if (!this.error)
+    if (!this.error && this.data !== undefined)
     if (typeof this.data != "boolean")
       this.error = "field must be type boolean";
     return this;
   }
 
   integer(min?:number, max?:number) {
-    if (!this.error)
-    if (Number.isInteger(this.data))
+    if (!this.error && this.data !== undefined)
+    if (!Number.isInteger(this.data))
       this.error = "field must be type integer";
     else if (min && this.data < min)
       this.error = `field must be larger than ${min}`;
-    else if (min && this.data < min)
-      this.error = `field must be larger than ${min}`;
+    else if (max && this.data > max)
+      this.error = `field must be larger than ${max}`;
     return this;
   }
 
   array() {
-    if (!this.error)
-    if (Array.isArray(this.data))
-      this.error = "field must be type integer";
+    if (!this.error && this.data !== undefined)
+    if (!Array.isArray(this.data))
+      this.error = "field must be type array";
+    return this;
+  }
+
+  object() {
+    if (!this.error && this.data !== undefined)
+    if (typeof this.data != "object")
+      this.error = "field must be type object";
     return this;
   }
 }

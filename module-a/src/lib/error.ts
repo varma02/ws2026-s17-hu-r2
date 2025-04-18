@@ -6,6 +6,10 @@ export class BaseError extends Error {
   }
 }
 
+export class NotFoundError extends BaseError {
+  constructor() { super(404, "Not found"); }
+}
+
 export class InvalidTokenError extends BaseError {
   constructor() { super(401, "Please log in"); }
 }
