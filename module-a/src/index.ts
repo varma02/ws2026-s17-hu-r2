@@ -4,6 +4,16 @@ import { adminAuth } from './lib/middleware';
 
 const app = express();
 app.use(express.json());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  console.log(req.method, req.path);
+  if (req.method === "OPTIONS") {
+    res.sendStatus(200);
+  } else next();
+})
+
 const router = express.Router();
 app.use("/api/v1", router);
 
@@ -35,4 +45,7 @@ app.use((req, res) => {
   throw new NotFoundError();
 });
 
-app.listen(80, (err) => err ? console.error(err) : console.log("app listening on 80"));
+app.listen(
+  process.env.PORT || 80,
+  (err) => err ? console.error(err) : console.log("app listening")
+);
