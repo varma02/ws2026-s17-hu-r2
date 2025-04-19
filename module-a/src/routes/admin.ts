@@ -21,9 +21,9 @@ router.post("/login", async (req, res) => {
     throw new InvalidCredsError();
   if (!user.token) {
     const token = crypto.randomBytes(32).toString('hex');
-    query("UPDATE admins SET token = ? WHERE username = ?", [token, username]);
     user.token = token;
   }
+  query("UPDATE admins SET token = ?, last_login_at = NOW() WHERE username = ?", [user.token, username]);
   res.status(200).json({
     success: true,
     token: user.token,

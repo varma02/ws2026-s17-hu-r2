@@ -5,4 +5,13 @@
   body {
     @apply bg-gray-200
   }
+  table {
+    @apply border rounded bg-gray-100 w-full;
+  }
+  tr {
+    @apply border-b;
+  }
+  th, td {
+    @apply p-4 text-left;
+  }
 }

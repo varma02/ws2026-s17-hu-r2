@@ -2,7 +2,7 @@ export default function Input({ label, name, type }) {
   return (
     <label className="border-none outline-none flex flex-col w-full">
       <span className="font-semibold">{label}</span>
-      <input className="border rounded p-1 outline-none"
+      <input className="border rounded p-1 outline-none bg-gray-100"
       type={type} name={name} />
     </label>
   )

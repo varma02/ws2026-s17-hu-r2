@@ -10,8 +10,8 @@ export default function AuthContext({ children }) {
     const ls_uid = localStorage.getItem("sudsy-uid")
     const ls_token = localStorage.getItem("sudsy-token")
     api.admin.list(ls_token).then(res => {
+      setUser(res.filter(v => v.id == ls_uid))
       setToken(ls_token)
-      setUser(res.data.filter(v => v.id == ls_uid))
     }).catch(() => {
       localStorage.removeItem("sudsy-uid")
       localStorage.removeItem("sudsy-token")

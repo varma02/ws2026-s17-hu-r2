@@ -7,11 +7,16 @@ import AuthContext from './lib/AuthContext'
 
 const Login = lazy(() => import('./routes/Login'))
 const Navbar = lazy(() => import('./components/Navbar'))
+const Subscriptions = lazy(() => import('./routes/Subscriptions'))
+const Admins = lazy(() => import('./routes/Admins'))
+const Locations = lazy(() => import('./routes/Locations'))
 
 const router = createBrowserRouter([
-  { path: "/login", element: <Login /> },
-  { path: "/", element: <Navbar />, children: [
-
+  {path: "/login", element: <Login />},
+  {path: "/", element: <Navbar />, children: [
+    {path: "/", element: <Subscriptions />},
+    {path: "/admins", element: <Admins />},
+    {path: "/locations", element: <Locations />},
   ]}
 ])
 
