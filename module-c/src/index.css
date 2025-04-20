@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "JakartaSans";
+  src: url("/font.ttf");
+}
+
+@layer base {
+  * {
+    font-family: "JakartaSans";
+  }
+}
