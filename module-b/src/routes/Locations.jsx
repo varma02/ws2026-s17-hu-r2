@@ -22,6 +22,7 @@ export default function Locations() {
   }, [])
   function handleDelete(event) {
     event.preventDefault()
+    if (!confirm("Are you sure you want to delete this location?")) return;
     const slug = event.target.dataset.slug
     api.admin.locations.delete(auth.token, slug)
     .then(() => {

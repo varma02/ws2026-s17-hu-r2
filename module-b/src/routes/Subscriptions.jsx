@@ -14,6 +14,7 @@ export default function Subscription() {
     .catch(() => toast("Something went wrong while loading subscriptions", "error"))
   }, [])
   function deleteSubscription(id) {
+    if (!confirm("Are you sure you want to delete this location?")) return;
     api.admin.subscriptions.delete(auth.token, id)
     .then(() => {
       toast(`Subscriber ${id} deleted`, "success")
