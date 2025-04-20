@@ -9,4 +9,17 @@
   * {
     font-family: "JakartaSans";
   }
+  html {
+    scroll-behavior: smooth;
+    background-color: black;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-semibold rounded-full px-4 py-2 text-white bg-sky-500;
+  }
+  .btn-secondary {
+    @apply font-semibold rounded-full px-4 py-2 text-white bg-zinc-800;
+  }
 }
