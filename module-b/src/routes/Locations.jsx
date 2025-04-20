@@ -4,6 +4,7 @@ import { useAuth } from "../lib/AuthContext"
 import api from "../lib/api"
 import { useToast } from "../lib/Toaster"
 import Input from "../components/Input"
+import { Link } from "react-router"
 
 export default function Locations() {
   const [locationFilter, setLocationFilter] = useState("")
@@ -19,6 +20,16 @@ export default function Locations() {
     .then((res) => setMachines(res))
     .catch(() => toast("Something went wrong while loading machines", "error"))
   }, [])
+  function handleDelete(event) {
+    event.preventDefault()
+    const slug = event.target.dataset.slug
+    api.admin.locations.delete(auth.token, slug)
+    .then(() => {
+      toast("Location deleted successfully", "success")
+      setLocations(locations.filter((l) => l.slug !== slug))
+    })
+    .catch(() => toast("Something went wrong while deleting the location", "error"))
+  }
   return (
     <div className="max-w-6xl min-h-full lg:py-20 p-4 mx-auto">
       <h2 className="font-bold text-4xl">Machines</h2>
@@ -48,14 +59,15 @@ export default function Locations() {
         >
           <Input label="Filter" name="filter" />
         </form>
-        <Button label="Create Location" />
+        <Link to="/locations/create"><Button label="Create Location" /></Link>
       </div>
       <table className="mt-4">
-        <thead>
+        <thead className="sticky -top-px bg-gray-100">
           <tr>
             <th>Name</th>
             <th>City</th>
             <th>Created At</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -69,8 +81,8 @@ export default function Locations() {
                 <td>{s.city}</td>
                 <td>{s.created_at}</td>
                 <td className="flex gap-2 justify-end">
-                  <Button label="Edit" />
-                  <Button label="Delete" />
+                  <Link to={`/locations/edit/${s.slug}`}><Button label="Edit" /></Link>
+                  <Button label="Delete" onClick={handleDelete} data-slug={s.slug} />
                 </td>
               </tr>
             ))

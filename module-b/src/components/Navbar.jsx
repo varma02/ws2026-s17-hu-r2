@@ -1,11 +1,17 @@
 import { Link, Outlet, useHref, useNavigate } from "react-router";
 import { useAuth } from "../lib/AuthContext";
 import Button from "./Button";
+import { useToast } from "../lib/Toaster";
 
 export default function Navbar() {
   const href = useHref()
   const navigate = useNavigate()
   const auth = useAuth()
+  const toast = useToast()
+  function handleLogout() {
+    auth.logout()
+    .then(() => toast("Logged out successfully", "success"))
+  }
   if (auth.token === null)
     navigate("/login")
   else return (<>
@@ -28,7 +34,7 @@ export default function Navbar() {
         <div>
           <label className="space-x-8">
             <span className="font-semibold">Sudsy Admin</span>
-            <Button label="Log Out" />
+            <Button label="Log Out" onClick={handleLogout} />
           </label>
         </div>
       </div>

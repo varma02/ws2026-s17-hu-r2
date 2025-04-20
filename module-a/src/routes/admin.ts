@@ -17,7 +17,7 @@ router.post("/login", async (req, res) => {
   const user = (await query<any[]>(`
     SELECT * FROM admins WHERE username = ?
   `, [username]))[0];
-  if (!user) // TODO: || !await bcrypt.compare(password, user.password))
+  if (!user || !await bcrypt.compare(password, user.password))
     throw new InvalidCredsError();
   if (!user.token) {
     const token = crypto.randomBytes(32).toString('hex');

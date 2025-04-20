@@ -3,6 +3,7 @@ import Button from "../components/Button"
 import { useAuth } from "../lib/AuthContext"
 import api from "../lib/api"
 import { useToast } from "../lib/Toaster"
+import { Link } from "react-router"
 
 export default function Admins() {
   const [admins, setAdmins] = useState([])
@@ -17,7 +18,7 @@ export default function Admins() {
     <div className="max-w-6xl min-h-full lg:py-20 p-4 mx-auto">
       <div className="flex justify-between">
         <h2 className="font-bold text-4xl">Admins</h2>
-        <Button label="Create Admin" />
+        <Link to="/admins/create"><Button label="Create Admin" /></Link>
       </div>
       <table className="mt-4">
         <thead>

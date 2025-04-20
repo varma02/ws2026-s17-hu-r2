@@ -1,5 +1,5 @@
 import express from 'express';
-import { BaseError, NotFoundError } from './lib/error';
+import { BaseError } from './lib/error';
 import { adminAuth } from './lib/middleware';
 
 const app = express();
@@ -40,9 +40,13 @@ router.get("/", adminAuth, (req, res) => {
 });
 
 router.use("/admin", (await import("./routes/admin")).default);
+router.use("/", (await import("./routes/public")).default);
 
 app.use((req, res) => {
-  throw new NotFoundError();
+  res.status(404).json({
+    success: false,
+    message: "Not Found"
+  })
 });
 
 app.listen(

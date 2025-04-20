@@ -63,7 +63,7 @@ async function newLocation(token, data) {
   })).json()
 }
 
-async function updateLocation(token, slug) {
+async function updateLocation(token, slug, data) {
   return await (await fetch(`${baseUrl}/admin/locations/${slug}`, {
     method: "PUT",
     headers: {
