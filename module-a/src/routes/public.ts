@@ -5,16 +5,24 @@ import { expect, field } from '../lib/validate';
 const router = express.Router();
 
 router.get("/locations", async (req, res) => {
-  const {page = 1, pageSize = 6, search} = req.query as any;
+  const {search} = req.query as any;
+  const page = parseInt(req.query.page || "1");
+  const pageSize = parseInt(req.query.pageSize || "6");
+  expect(
+    field("page", page).exist().integer(1),
+    field("pageSize", pageSize).exist().integer(1),
+    field("search", search).string(),
+  )
   const pagination = (await query<any[]>(`
     SELECT COUNT(id) as total FROM locations
-    WHERE deleted_at IS NULL
-  `))[0];
+    WHERE deleted_at IS NULL ${search ? "AND (INSTR(locations.name, ?) OR INSTR(locations.city, ?))" : ""}
+  `, search ? [search, search] : []))[0];
   const locations = await query<any[]>(`
-    SELECT id, name, slug, description, postal_code, city, address, COUNT(location_machine.id) as machine_count
+    SELECT locations.id, name, slug, description, postal_code, city, address, COUNT(location_machine.id) as machine_count
     FROM locations INNER JOIN location_machine ON location_machine.location_id = locations.id
-    WHERE deleted_at IS NULL ${search ? "AND INSTR(locations.name, ?)" : ""} GROUP BY locations.id LIMIT ? OFFSET ?
-  `, [search, pageSize, (page - 1) * pageSize]);
+    WHERE deleted_at IS NULL ${search ? "AND (INSTR(locations.name, ?) OR INSTR(locations.city, ?))" : ""}
+    GROUP BY locations.id LIMIT ? OFFSET ?
+  `, [...(search ? [search, search] : []), pageSize, (page - 1) * pageSize]);
   res.status(200).json({
     page: page,
     page_size: pageSize,

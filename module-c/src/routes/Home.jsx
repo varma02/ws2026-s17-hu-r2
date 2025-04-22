@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col bg-white items-center px-4 py-8">
+      <section className="flex flex-col bg-white items-center px-4 py-8" id="locations">
         <h2 className="text-center mb-4">
           <span className="text-sky-500 uppercase font-bold text-xl">
             Where are we?
@@ -40,7 +40,51 @@ export default function Home() {
         <Locations />
       </section>
 
-      
+      <section className="flex gap-20 max-w-7xl mx-auto px-4 py-20" id="download">
+        <div className="flex flex-col gap-4 justify-center">
+          <h2 className="text-left mb-4">
+            <span className="text-sky-500 uppercase font-bold text-xl">
+              Download our app!
+            </span>
+            <br />
+            <span className="text-4xl font-bold text-white">
+              Your Laundry,
+              <br />
+              Simplified
+            </span>
+          </h2>
+          <p className="text-gray-300 text-xl">
+            Your perfect laundry experience is just a tap away—download the Sudsy app now on the App Store or Google Play.
+          </p>
+          <div className="flex gap-4">
+            <img src="images/app-store-download.png" alt="App Store download" />
+            <img src="images/google-play-download.png" alt="Google Play download" />
+          </div>
+        </div>
+        <img className="rounded-xl border-4 border-gray-600 w-1/2" src="images/laundromat.png" alt="Image of a laundromat" />
+      </section>
+ 
+      <section className="bg-white py-10 px-4 flex flex-col items-center gap-4" id="subscribe">
+        <h2 className="text-center mb-4">
+          <span className="text-sky-500 uppercase font-bold text-xl">
+            Newsletter
+          </span>
+          <br />
+          <span className="text-4xl font-bold">
+            Subscribe
+          </span>
+        </h2>
+        <form className="contents">
+          <label className="flex gap-4 border border-gray-400 rounded-full py-2 px-4">
+            <img src="images/at.svg" alt="Email icon" />
+            <input type="email" placeholder="E-mail address"
+            className="w-80 outline-none border-none" />
+          </label>
+          <button className="btn">
+            Submit
+          </button>
+        </form>
+      </section>
     </div>
   )
 }

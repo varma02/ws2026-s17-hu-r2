@@ -17,9 +17,9 @@
 
 @layer components {
   .btn {
-    @apply font-semibold rounded-full px-4 py-2 text-white bg-sky-500;
+    @apply font-semibold rounded-full px-4 py-2 text-white bg-sky-500 disabled:opacity-70;
   }
   .btn-secondary {
-    @apply font-semibold rounded-full px-4 py-2 text-white bg-zinc-800;
+    @apply font-semibold rounded-full px-4 py-2 text-white bg-zinc-800 disabled:opacity-70;
   }
 }
