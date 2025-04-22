@@ -72,9 +72,10 @@ router.post("/subscribe", async (req, res) => {
   expect(
     field("display_email", display_email).exist().string(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
   );
+  const email = display_email.replace(/\+[^\s@]+@/, "");
   await query(`
     INSERT INTO subscriptions (display_email, email, nickname) VALUES (?, ?, ?)
-  `, [display_email, "".replace(/\+[^\s@]+@/, "")]);
+  `, [display_email, email, email.split("@")[0]]);
   res.status(201).json({ success: true });
 });
 

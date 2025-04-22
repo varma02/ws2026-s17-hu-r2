@@ -7,10 +7,12 @@ import Navbar from './components/Layout'
 const Home = lazy(() => import('./routes/Home'))
 const NotFound = lazy(() => import('./routes/NotFound'))
 const ComingSoon = lazy(() => import('./routes/ComingSoon'))
+const Location = lazy(() => import('./routes/Location'))
 
 const router = createBrowserRouter([
   {element: <Navbar />, errorElement: <NotFound />, children: [
     {path: '/', element: <Home />},
+    {path: '/location/:slug', element: <Location />},
     {path: '/login', element: <ComingSoon />},
     {path: '/privacy', element: <ComingSoon />},
     {path: '/terms-and-conditions', element: <ComingSoon />},

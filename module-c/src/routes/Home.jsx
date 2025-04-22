@@ -1,8 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
 import {Link} from "react-router"
 import Locations from "../components/Locations"
+import api from "../lib/api"
 
 export default function Home() {
+  const [subSuccess, setSubSuccess] = useState(null)
+  function handleSubscribe(event) {
+    event.preventDefault()
+    setSubSuccess(null)
+    const data = new FormData(event.target)
+    const email = data.get("email")
+    api.subscribe(email)
+    .then((res) => res.success && setSubSuccess(true))
+    .catch(() => setSubSuccess(false))
+  }
   return (
     <div className="flex-1 bg-gray-900">
       <section className="py-32 flex flex-col items-center relative overflow-hidden" id="hero">
@@ -74,13 +85,19 @@ export default function Home() {
             Subscribe
           </span>
         </h2>
-        <form className="contents">
+        <form className="contents" onSubmit={handleSubscribe}>
           <label className="flex gap-4 border border-gray-400 rounded-full py-2 px-4">
-            <img src="images/at.svg" alt="Email icon" />
-            <input type="email" placeholder="E-mail address"
+            {subSuccess === null ? (
+              <img src="images/at.svg" alt="Email" />
+            ) : subSuccess ? (
+              <img src="images/check.svg" alt="Subscription successful" />
+            ) : (
+              <img src="images/close-icon.svg" alt="Subscription failed" />
+            )}
+            <input type="email" name="email" placeholder="E-mail address"
             className="w-80 outline-none border-none" />
           </label>
-          <button className="btn">
+          <button className="btn" type="submit">
             Submit
           </button>
         </form>

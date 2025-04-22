@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
 import api from "../lib/api"
+import { useNavigate } from "react-router"
 
 export default function Locations() {
+  const navigate = useNavigate()
   const [pagination, setPagination] = useState({
     page: 1,
     total_pages: 1,
@@ -39,7 +41,8 @@ export default function Locations() {
       </form>
       <ul className="grid grid-cols-3 gap-4">
         {locations?.map((v) => (
-          <li className="flex flex-col gap-4 p-6 border border-gray-400 rounded" key={v.id}>
+          <li className="flex flex-col gap-4 p-6 border border-gray-400 rounded
+          hover:border-sky-500 hover:bg-sky-100" key={v.id} onClick={() => navigate(`/location/${v.slug}`)}>
             <h4 className="text-xl font-semibold">{v.name}</h4>
             <p className="mb-auto" dangerouslySetInnerHTML={{__html:v.description}} />
             <hr className="border-gray-400" />

@@ -116,18 +116,6 @@ async function publicLocations(slug) {
   })).json()
 }
 
-async function publicSubscribe(email) {
-  return await (await fetch(`${baseUrl}/subscribe`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      display_email: email
-    })
-  })).json()
-}
-
 
 export default {
   baseUrl,
@@ -145,6 +133,5 @@ export default {
       delete: deleteSubscription
     }
   },
-  locations: publicLocations,
-  subscribe: publicSubscribe
+  locations: publicLocations
 }

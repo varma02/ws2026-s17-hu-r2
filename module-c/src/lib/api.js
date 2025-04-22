@@ -14,7 +14,7 @@ async function publicLocations(page = 1, search) {
 
 async function publicSubscribe(email) {
   return await (await fetch(`${baseUrl}/subscribe`, {
-    method: "GET",
+    method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
